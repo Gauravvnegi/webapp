@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--The lang attribute specifies the language of the element's content. -->
+<html lang="en">
+
+<head>
+
+    <!--The charset attribute specifies the character encoding for the HTML document.-->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web application</title>
+    <!--The rel attribute defines the relationship between a linked resource and the current document.-->
+    <!-- specifies a persistent or preferred style-->
+    <!--The REL attribute is used to define the relationship between the linked file and the HTML document-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <!--<div class="container">-->
+    <nav class="nav">
+        <div class="container">
+            <!--The <div> tag defines a division or a section in an HTML document. -->
+            <div class="nav_content">
+                <div class="logo">
+                    <a href="./" class="logo_text">Gaurav 's Website</a>
+                </div>
+                <ul class="nav_list">
+                    <li><a href="./" class="nav_link">Home</a></li>
+                    <li><a href="apps/selfie.html" class="nav_link">Selfie</a></li>
+                    <li><a href="apps/qr-code.html" class="nav_link">Qr-code</a></li>
+                    <li><a href="apps/recorder.html" class="nav_link">Recorder</a></li>
+                </ul>
+                <div class="nav_items">
+                    <a href="https://github.com/Gauravvnegi" class="btn nav_btn">My Github</a>
+                    <span class="menu_btn"><i class="fas fa-bars"></i></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--br break-->
+    <main class="main introduce">
+        <h1 class="title">Hello My name is Gaurav Negi . <br> Hope you will enjoy this website</h1>
+        <div class="container">
+            <div class="wrapper projects">
+                <div class="project_box project_selfie">
+                    <a href="apps/selfie">
+                        <h3 class="project_box_title"><span>Web Selfie</span> - Fancy camera. You can take photos</h3>
+                    </a>
+                    <a href="apps/selfie.html"><img src="img/g.jpg" class="project_box_img" alt=""></a>
+                </div>
+                <div class="project_box project_recorder">
+                    <a href="apps/recorder.html">
+                        <h3 class="project_box_title"><span>Voice recorder</span> Record your voice in one click</h3>
+                    </a>
+                    <a href="apps/recorder.html"><img src="img/recorder.png" class="project_box_img" alt=""></a>
+                </div>
+                <div class="project_box project_selfie">
+                    <a href="apps/qr-code">
+                        <h3 class="project_box_title"><span>QR code</span> - Simple QR code generator</h3>
+                    </a>
+                    <a href="apps/qr-code.html"><img src="img/qrcode.png" class="project_box_img" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="social-bar">
+            <a href="https://www.facebook.com/profile.php?id=100005588236183">
+                <div class="social-bar__item social-bar__fb">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </div>
+            </a>
+            <a href="https://twitter.com/gauravnegi_">
+                <div class="social-bar__item social-bar__twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </div>
+            </a>
+            <a href=https://www.linkedin.com/in/gaurav-negi-91b707209/ ">
+                <div class="social-bar__item social-bar__linkedin ">
+                    <i class="fab fa-telegram-plane " aria-hidden="true "></i>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/gauravnegi_26/ ">
+                <div class="social-bar__item social-bar__instagram ">
+                    <i class="fab fa-instagram " aria-hidden="true "></i>
+                </div>
+            </a>
+            <!--a tag -->
+            <a href="https://github.com/Gauravvnegi ">
+                <div class="social-bar__item social-bar__github ">
+                    <i class="fab fa-github " aria-hidden="true "></i>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        const title = document.querySelectorAll('.project_box_title');
+        for (let i = 0; i < title.length; i++) {
+            title[i].addEventListener('mouseover', function() {
+                document.querySelectorAll('.project_box_img')[i].classList.add('active');
+            });
+            title[i].addEventListener('mouseout', function() {
+                document.querySelectorAll('.project_box_img')[i].classList.remove('active');
+            });
+        }
+    </script>
+    <script src="js/nav.js "></script>
+</body>
+
+</html>
